@@ -1,8 +1,8 @@
 package com.ojas.springboot;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import java.util.Scanner;
 
 @Configuration
 public class AppConfig {
@@ -10,9 +10,12 @@ public class AppConfig {
     public MyFirstClass myFirstClass(){
         return new MyFirstClass();
     }
+
     @Bean
     public MyDetails myDetails(){
-        return new MyDetails("Ojas",24);
+        Scanner sc=new Scanner(System.in);
+        String name=sc.next();
+        int age=sc.nextInt();
+        return new MyDetails(name,age);
     }
-
 }
