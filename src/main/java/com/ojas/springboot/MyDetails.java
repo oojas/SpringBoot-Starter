@@ -12,7 +12,13 @@ public class MyDetails {
         this.age=age;
         this.name=name;
     }
-    MyDetails(){}
+    public int getAge() {
+        return age;
+    }
+    public String getName() {
+        return name;
+    }
+
     public void printDetails(MyDetails details){
         System.out.println(details.name);
         System.out.println(details.age);
